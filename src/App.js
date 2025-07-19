@@ -4,10 +4,10 @@ import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
-//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
-//import About from "./components/About";
+import About from "./components/About";
 
 function App() {
   const [mode, setmode] = useState("dark");
@@ -46,7 +46,7 @@ function App() {
 
 return (
   <>
-    {/* <Router> */}
+     <Router> 
     <Navbar
       title="TextUtils"
       about="About"
@@ -57,7 +57,7 @@ return (
     <Alert alert={alert} />
 
     <div className="container my-3">
-      {/* <Routes>
+       <Routes>
         <Route exact path="/about" element={<About />} />
         <Route exact path="/" element={
           <Textform
@@ -66,7 +66,7 @@ return (
             mode={mode}
           />
         } />
-      </Routes> */}
+      </Routes> 
 
       {/* Or if you just want to render Textform directly for now: */}
       <Textform
@@ -75,7 +75,7 @@ return (
         mode={mode}
       />
     </div>
-    {/* </Router> */}
+    </Router>
   </>
 );
 
